@@ -1,0 +1,12 @@
+{
+  "yaml.schemas": {
+    "kubernetes": ["lab/scenarios/**/*.yaml"]
+  },
+  "files.associations": {
+    "*.yaml": "yaml"
+  },
+  "editor.rulers": [88],
+  "[python]": {
+    "editor.formatOnSave": true
+  }
+}
