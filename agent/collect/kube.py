@@ -459,8 +459,17 @@ class Collector:
                 }
             )
 
+        # The lab tags each Deployment with its scenario id. That label is the
+        # answer key — leaking it into IncidentContext would make every eval
+        # score meaningless. Drop it at the boundary.
+        annotations = {
+            k: v
+            for k, v in (deploy.metadata.annotations or {}).items()
+            if not k.startswith("sre-lab/")
+        }
+
         spec = {
-            "annotations": dict(deploy.metadata.annotations or {}),
+            "annotations": annotations,
             "replicas": deploy.spec.replicas or 0,
             "containers": containers,
         }

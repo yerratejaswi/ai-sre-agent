@@ -32,7 +32,9 @@ from __future__ import annotations
 import dataclasses
 import enum
 import json
+from dataclasses import dataclass, field
 from datetime import datetime
+from enum import Enum
 from typing import Any, Optional
 
 
@@ -291,42 +293,6 @@ class IncidentContext:
 
 
 # --------------------------------------------------------------------------
-# retrieval
-# --------------------------------------------------------------------------
-
-
-class RetrievalStrategy(str, enum.Enum):
-    """How a chunk was found. Recorded so the eval can report which strategy
-    actually contributed, rather than assuming vector search earned its place.
-    """
-
-    TRACEBACK = "traceback"                # frame named the file directly
-    MANIFEST_SOURCE = "manifest_source"    # declared config vs actual source
-    SYMBOL = "symbol"                      # named symbol lookup
-    VECTOR = "vector"                      # embedding similarity
-
-
-@dataclasses.dataclass
-class CodeChunk:
-    chunk_id: str                  # citable in a hypothesis
-    repo: str
-    path: str
-    start_line: int
-    end_line: int
-    symbol: Optional[str]
-    content: str
-    strategy: RetrievalStrategy
-    score: Optional[float] = None
-
-
-@dataclasses.dataclass
-class CodeContext:
-    repo: Optional[str]
-    chunks: list[CodeChunk] = dataclasses.field(default_factory=list)
-    resolution_notes: list[str] = dataclasses.field(default_factory=list)
-
-
-# --------------------------------------------------------------------------
 # analysis
 # --------------------------------------------------------------------------
 
@@ -419,3 +385,52 @@ def _encode(obj: Any) -> Any:
 def to_json(obj: Any, indent: int = 2) -> str:
     """Serialise any model above. Used to write tests/fixtures/."""
     return json.dumps(dataclasses.asdict(obj), default=_encode, indent=indent)
+
+# --- Phase 2: retrieval ----------------------------------------------------
+
+
+class RetrievalStrategy(str, Enum):
+    """How a chunk was found. Recorded so we can measure which paths carry
+    the diagnosis and which are dead weight."""
+
+    TRACEBACK = "traceback"          # exact file:line from a stack frame
+    MANIFEST_SOURCE = "manifest_source"  # declared config vs actual source
+    VECTOR = "vector"                # semantic search, the residual path
+    ENTRYPOINT = "entrypoint"        # repo root files, always included
+
+
+@dataclass
+class CodeChunk:
+    """A span of source, addressable and citable.
+
+    `path` is repo-relative and `start_line`/`end_line` are 1-indexed and
+    inclusive, so a Hypothesis citation can point at this exactly.
+    """
+
+    path: str
+    start_line: int
+    end_line: int
+    content: str
+    symbol: str | None = None          # function or class name, if known
+    strategy: RetrievalStrategy = RetrievalStrategy.VECTOR
+    score: float | None = None         # only meaningful for VECTOR
+
+    @property
+    def ref(self) -> str:
+        return f"{self.path}:{self.start_line}-{self.end_line}"
+
+
+@dataclass
+class CodeContext:
+    """Everything retrieval found for one incident."""
+
+    repo_url: str | None
+    repo_path: str | None             # local checkout actually read
+    commit: str | None
+    chunks: list[CodeChunk] = field(default_factory=list)
+    strategies_fired: list[RetrievalStrategy] = field(default_factory=list)
+    notes: list[str] = field(default_factory=list)   # why a strategy skipped
+
+    @property
+    def resolved(self) -> bool:
+        return self.repo_path is not None

@@ -1,0 +1,1408 @@
+{
+  "alert": {
+    "fingerprint": "manual-shop-orders-api",
+    "source": "manual",
+    "severity": "info",
+    "namespace": "shop",
+    "workload": "orders-api",
+    "reason": "ManualInvestigation",
+    "summary": "manual collection for shop/orders-api",
+    "first_seen": "2026-08-04T22:28:56.694220+00:00",
+    "last_seen": "2026-08-04T22:28:56.694220+00:00",
+    "evidence": {}
+  },
+  "namespace": "shop",
+  "workload": "orders-api",
+  "window": {
+    "t0": "2026-08-04T22:28:56.694220+00:00",
+    "lookback_seconds": 1800,
+    "t0_source": "alert ManualInvestigation"
+  },
+  "collected_at": "2026-08-04T22:28:56.824894+00:00",
+  "pods": [
+    {
+      "name": "orders-api-85ddb6cf4d-8xjpr",
+      "phase": "Running",
+      "ready": true,
+      "node": "sre-lab-worker",
+      "created_at": "2026-08-04T22:28:07+00:00",
+      "containers": [
+        {
+          "name": "orders-api",
+          "ready": true,
+          "started": true,
+          "restart_count": 0,
+          "phase": "Running",
+          "waiting_reason": null,
+          "waiting_message": null,
+          "last_terminated_reason": null,
+          "last_terminated_exit_code": null,
+          "last_terminated_at": null,
+          "image": "docker.io/library/orders-api:v1.0.0",
+          "memory_limit": "256Mi",
+          "memory_request": "64Mi",
+          "cpu_limit": "500m"
+        }
+      ],
+      "conditions": {
+        "PodReadyToStartContainers": "True",
+        "Initialized": "True",
+        "Ready": "True",
+        "ContainersReady": "True",
+        "PodScheduled": "True"
+      },
+      "owner": "orders-api-85ddb6cf4d",
+      "generation": "current"
+    },
+    {
+      "name": "orders-api-85ddb6cf4d-jjrcq",
+      "phase": "Running",
+      "ready": true,
+      "node": "sre-lab-worker",
+      "created_at": "2026-08-04T22:28:13+00:00",
+      "containers": [
+        {
+          "name": "orders-api",
+          "ready": true,
+          "started": true,
+          "restart_count": 0,
+          "phase": "Running",
+          "waiting_reason": null,
+          "waiting_message": null,
+          "last_terminated_reason": null,
+          "last_terminated_exit_code": null,
+          "last_terminated_at": null,
+          "image": "docker.io/library/orders-api:v1.0.0",
+          "memory_limit": "256Mi",
+          "memory_request": "64Mi",
+          "cpu_limit": "500m"
+        }
+      ],
+      "conditions": {
+        "PodReadyToStartContainers": "True",
+        "Initialized": "True",
+        "Ready": "True",
+        "ContainersReady": "True",
+        "PodScheduled": "True"
+      },
+      "owner": "orders-api-85ddb6cf4d",
+      "generation": "current"
+    }
+  ],
+  "logs": {
+    "current_status": "ok",
+    "previous_status": "no_previous",
+    "lines": [
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 0,
+        "text": "2026-08-04T22:28:08.017927315Z 2026-08-04 22:28:08,017 INFO [orders-api] connecting to database at postgres.shop.svc:5432/orders",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 1,
+        "text": "2026-08-04T22:28:08.019148396Z 2026-08-04 22:28:08,018 INFO [orders-api] orders-api listening on :8080",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 2,
+        "text": "2026-08-04T22:28:08.019299286Z  * Serving Flask app 'main'",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 3,
+        "text": "2026-08-04T22:28:08.019316309Z  * Debug mode: off",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 4,
+        "text": "2026-08-04T22:28:08.080936495Z 2026-08-04 22:28:08,080 INFO [werkzeug] \u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 5,
+        "text": "2026-08-04T22:28:08.080954441Z  * Running on all addresses (0.0.0.0)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 6,
+        "text": "2026-08-04T22:28:08.080956146Z  * Running on http://127.0.0.1:8080",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 7,
+        "text": "2026-08-04T22:28:08.080957463Z  * Running on http://10.244.1.49:8080",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 8,
+        "text": "2026-08-04T22:28:08.080958970Z 2026-08-04 22:28:08,080 INFO [werkzeug] \u001b[33mPress CTRL+C to quit\u001b[0m",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 9,
+        "text": "2026-08-04T22:28:12.970512367Z 2026-08-04 22:28:12,970 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:12] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 10,
+        "text": "2026-08-04T22:28:17.465815481Z 2026-08-04 22:28:17,465 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:17] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 11,
+        "text": "2026-08-04T22:28:17.575802930Z 2026-08-04 22:28:17,575 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:17] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 12,
+        "text": "2026-08-04T22:28:17.970534463Z 2026-08-04 22:28:17,970 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:17] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 13,
+        "text": "2026-08-04T22:28:21.679879725Z 2026-08-04 22:28:21,679 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:21] \"GET /orders HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 14,
+        "text": "2026-08-04T22:28:22.968806398Z 2026-08-04 22:28:22,968 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:22] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 15,
+        "text": "2026-08-04T22:28:27.463648120Z 2026-08-04 22:28:27,463 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:27] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 16,
+        "text": "2026-08-04T22:28:27.968266252Z 2026-08-04 22:28:27,968 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:27] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 17,
+        "text": "2026-08-04T22:28:28.799825035Z 2026-08-04 22:28:28,799 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:28] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 18,
+        "text": "2026-08-04T22:28:30.864164151Z 2026-08-04 22:28:30,863 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:30] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 19,
+        "text": "2026-08-04T22:28:32.935455713Z 2026-08-04 22:28:32,935 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:32] \"GET /orders HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 20,
+        "text": "2026-08-04T22:28:32.968496982Z 2026-08-04 22:28:32,968 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:32] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 21,
+        "text": "2026-08-04T22:28:37.464030763Z 2026-08-04 22:28:37,463 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:37] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 22,
+        "text": "2026-08-04T22:28:37.968292611Z 2026-08-04 22:28:37,967 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:37] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 23,
+        "text": "2026-08-04T22:28:42.117700004Z 2026-08-04 22:28:42,117 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:42] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 24,
+        "text": "2026-08-04T22:28:42.968224447Z 2026-08-04 22:28:42,967 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:42] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 25,
+        "text": "2026-08-04T22:28:44.175066762Z 2026-08-04 22:28:44,174 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:44] \"GET /orders HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 26,
+        "text": "2026-08-04T22:28:47.463387182Z 2026-08-04 22:28:47,463 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:47] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 27,
+        "text": "2026-08-04T22:28:47.967816515Z 2026-08-04 22:28:47,967 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:47] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 28,
+        "text": "2026-08-04T22:28:52.966722741Z 2026-08-04 22:28:52,966 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:52] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 29,
+        "text": "2026-08-04T22:28:53.398984815Z 2026-08-04 22:28:53,398 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:53] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 30,
+        "text": "2026-08-04T22:28:53.437482085Z 2026-08-04 22:28:53,437 INFO [werkzeug] 10.244.1.51 - - [04/Aug/2026 22:28:53] \"GET /orders HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 31,
+        "text": "2026-08-04T22:28:53.445809033Z 2026-08-04 22:28:53,444 ERROR [orders-api] unhandled exception serving /orders/1001",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 32,
+        "text": "2026-08-04T22:28:53.445842275Z Traceback (most recent call last):",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 33,
+        "text": "2026-08-04T22:28:53.445845066Z   File \"/usr/local/lib/python3.11/site-packages/flask/app.py\", line 880, in full_dispatch_request",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 34,
+        "text": "2026-08-04T22:28:53.445847402Z     rv = self.dispatch_request()",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 35,
+        "text": "2026-08-04T22:28:53.445848768Z          ^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 36,
+        "text": "2026-08-04T22:28:53.445850123Z   File \"/usr/local/lib/python3.11/site-packages/flask/app.py\", line 865, in dispatch_request",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 37,
+        "text": "2026-08-04T22:28:53.445851502Z     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 38,
+        "text": "2026-08-04T22:28:53.445854375Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 39,
+        "text": "2026-08-04T22:28:53.445855716Z   File \"/app/main.py\", line 106, in get_order",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 40,
+        "text": "2026-08-04T22:28:53.445857061Z     flags = load_feature_flags()",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 41,
+        "text": "2026-08-04T22:28:53.445858397Z             ^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 42,
+        "text": "2026-08-04T22:28:53.445860061Z   File \"/app/main.py\", line 83, in load_feature_flags",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 43,
+        "text": "2026-08-04T22:28:53.445861401Z     return json.loads(RAW_FEATURE_FLAGS)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 44,
+        "text": "2026-08-04T22:28:53.445862762Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 45,
+        "text": "2026-08-04T22:28:53.445864259Z   File \"/usr/local/lib/python3.11/json/__init__.py\", line 346, in loads",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 46,
+        "text": "2026-08-04T22:28:53.445866178Z     return _default_decoder.decode(s)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 47,
+        "text": "2026-08-04T22:28:53.445867968Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 48,
+        "text": "2026-08-04T22:28:53.445869816Z   File \"/usr/local/lib/python3.11/json/decoder.py\", line 337, in decode",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 49,
+        "text": "2026-08-04T22:28:53.445871574Z     obj, end = self.raw_decode(s, idx=_w(s, 0).end())",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 50,
+        "text": "2026-08-04T22:28:53.445873486Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 51,
+        "text": "2026-08-04T22:28:53.445875400Z   File \"/usr/local/lib/python3.11/json/decoder.py\", line 355, in raw_decode",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 52,
+        "text": "2026-08-04T22:28:53.445877570Z     raise JSONDecodeError(\"Expecting value\", s, err.value) from None",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 53,
+        "text": "2026-08-04T22:28:53.445879642Z json.decoder.JSONDecodeError: Expecting value: line 1 column 41 (char 40)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 54,
+        "text": "2026-08-04T22:28:53.446168050Z 2026-08-04 22:28:53,445 INFO [werkzeug] 10.244.1.51 - - [04/Aug/2026 22:28:53] \"\u001b[35m\u001b[1mGET /orders/1001 HTTP/1.1\u001b[0m\" 500 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-8xjpr",
+        "container": "orders-api",
+        "index": 55,
+        "text": "2026-08-04T22:28:55.465598211Z 2026-08-04 22:28:55,465 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:55] \"GET /orders HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 0,
+        "text": "2026-08-04T22:28:13.893306194Z 2026-08-04 22:28:13,892 INFO [orders-api] connecting to database at postgres.shop.svc:5432/orders",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 1,
+        "text": "2026-08-04T22:28:13.895019042Z 2026-08-04 22:28:13,894 INFO [orders-api] orders-api listening on :8080",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 2,
+        "text": "2026-08-04T22:28:13.895051000Z  * Serving Flask app 'main'",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 3,
+        "text": "2026-08-04T22:28:13.895055958Z  * Debug mode: off",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 4,
+        "text": "2026-08-04T22:28:13.898921891Z 2026-08-04 22:28:13,898 INFO [werkzeug] \u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 5,
+        "text": "2026-08-04T22:28:13.898942706Z  * Running on all addresses (0.0.0.0)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 6,
+        "text": "2026-08-04T22:28:13.898946432Z  * Running on http://127.0.0.1:8080",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 7,
+        "text": "2026-08-04T22:28:13.898948623Z  * Running on http://10.244.1.50:8080",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 8,
+        "text": "2026-08-04T22:28:13.898951166Z 2026-08-04 22:28:13,898 INFO [werkzeug] \u001b[33mPress CTRL+C to quit\u001b[0m",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 9,
+        "text": "2026-08-04T22:28:18.984757101Z 2026-08-04 22:28:18,984 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:18] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 10,
+        "text": "2026-08-04T22:28:23.356964062Z 2026-08-04 22:28:23,356 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:23] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 11,
+        "text": "2026-08-04T22:28:23.743595845Z 2026-08-04 22:28:23,742 ERROR [orders-api] unhandled exception serving /orders/1001",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 12,
+        "text": "2026-08-04T22:28:23.743623389Z Traceback (most recent call last):",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 13,
+        "text": "2026-08-04T22:28:23.743626653Z   File \"/usr/local/lib/python3.11/site-packages/flask/app.py\", line 880, in full_dispatch_request",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 14,
+        "text": "2026-08-04T22:28:23.743628746Z     rv = self.dispatch_request()",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 15,
+        "text": "2026-08-04T22:28:23.743630434Z          ^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 16,
+        "text": "2026-08-04T22:28:23.743632087Z   File \"/usr/local/lib/python3.11/site-packages/flask/app.py\", line 865, in dispatch_request",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 17,
+        "text": "2026-08-04T22:28:23.743633737Z     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 18,
+        "text": "2026-08-04T22:28:23.743635716Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 19,
+        "text": "2026-08-04T22:28:23.743637367Z   File \"/app/main.py\", line 106, in get_order",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 20,
+        "text": "2026-08-04T22:28:23.743639004Z     flags = load_feature_flags()",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 21,
+        "text": "2026-08-04T22:28:23.743640634Z             ^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 22,
+        "text": "2026-08-04T22:28:23.743642611Z   File \"/app/main.py\", line 83, in load_feature_flags",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 23,
+        "text": "2026-08-04T22:28:23.743647255Z     return json.loads(RAW_FEATURE_FLAGS)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 24,
+        "text": "2026-08-04T22:28:23.743649163Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 25,
+        "text": "2026-08-04T22:28:23.743650908Z   File \"/usr/local/lib/python3.11/json/__init__.py\", line 346, in loads",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 26,
+        "text": "2026-08-04T22:28:23.743652515Z     return _default_decoder.decode(s)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 27,
+        "text": "2026-08-04T22:28:23.743654097Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 28,
+        "text": "2026-08-04T22:28:23.743655732Z   File \"/usr/local/lib/python3.11/json/decoder.py\", line 337, in decode",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 29,
+        "text": "2026-08-04T22:28:23.743657453Z     obj, end = self.raw_decode(s, idx=_w(s, 0).end())",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 30,
+        "text": "2026-08-04T22:28:23.743659067Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 31,
+        "text": "2026-08-04T22:28:23.743660686Z   File \"/usr/local/lib/python3.11/json/decoder.py\", line 355, in raw_decode",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 32,
+        "text": "2026-08-04T22:28:23.743662376Z     raise JSONDecodeError(\"Expecting value\", s, err.value) from None",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 33,
+        "text": "2026-08-04T22:28:23.743664131Z json.decoder.JSONDecodeError: Expecting value: line 1 column 41 (char 40)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 34,
+        "text": "2026-08-04T22:28:23.743685748Z 2026-08-04 22:28:23,743 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:23] \"\u001b[35m\u001b[1mGET /orders/1001 HTTP/1.1\u001b[0m\" 500 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 35,
+        "text": "2026-08-04T22:28:23.983114234Z 2026-08-04 22:28:23,982 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:23] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 36,
+        "text": "2026-08-04T22:28:28.981407850Z 2026-08-04 22:28:28,981 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:28] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 37,
+        "text": "2026-08-04T22:28:33.355889961Z 2026-08-04 22:28:33,355 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:33] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 38,
+        "text": "2026-08-04T22:28:33.981921415Z 2026-08-04 22:28:33,981 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:33] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 39,
+        "text": "2026-08-04T22:28:34.983239294Z 2026-08-04 22:28:34,982 ERROR [orders-api] unhandled exception serving /orders/1001",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 40,
+        "text": "2026-08-04T22:28:34.983276727Z Traceback (most recent call last):",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 41,
+        "text": "2026-08-04T22:28:34.983280440Z   File \"/usr/local/lib/python3.11/site-packages/flask/app.py\", line 880, in full_dispatch_request",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 42,
+        "text": "2026-08-04T22:28:34.983282871Z     rv = self.dispatch_request()",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 43,
+        "text": "2026-08-04T22:28:34.983284775Z          ^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 44,
+        "text": "2026-08-04T22:28:34.983286497Z   File \"/usr/local/lib/python3.11/site-packages/flask/app.py\", line 865, in dispatch_request",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 45,
+        "text": "2026-08-04T22:28:34.983288280Z     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 46,
+        "text": "2026-08-04T22:28:34.983290541Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 47,
+        "text": "2026-08-04T22:28:34.983292287Z   File \"/app/main.py\", line 106, in get_order",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 48,
+        "text": "2026-08-04T22:28:34.983294028Z     flags = load_feature_flags()",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 49,
+        "text": "2026-08-04T22:28:34.983295738Z             ^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 50,
+        "text": "2026-08-04T22:28:34.983297622Z   File \"/app/main.py\", line 83, in load_feature_flags",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 51,
+        "text": "2026-08-04T22:28:34.983299314Z     return json.loads(RAW_FEATURE_FLAGS)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 52,
+        "text": "2026-08-04T22:28:34.983300976Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 53,
+        "text": "2026-08-04T22:28:34.983302709Z   File \"/usr/local/lib/python3.11/json/__init__.py\", line 346, in loads",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 54,
+        "text": "2026-08-04T22:28:34.983304381Z     return _default_decoder.decode(s)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 55,
+        "text": "2026-08-04T22:28:34.983305985Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 56,
+        "text": "2026-08-04T22:28:34.983307590Z   File \"/usr/local/lib/python3.11/json/decoder.py\", line 337, in decode",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 57,
+        "text": "2026-08-04T22:28:34.983309303Z     obj, end = self.raw_decode(s, idx=_w(s, 0).end())",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 58,
+        "text": "2026-08-04T22:28:34.983310949Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 59,
+        "text": "2026-08-04T22:28:34.983312654Z   File \"/usr/local/lib/python3.11/json/decoder.py\", line 355, in raw_decode",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 60,
+        "text": "2026-08-04T22:28:34.983314329Z     raise JSONDecodeError(\"Expecting value\", s, err.value) from None",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 61,
+        "text": "2026-08-04T22:28:34.983316020Z json.decoder.JSONDecodeError: Expecting value: line 1 column 41 (char 40)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 62,
+        "text": "2026-08-04T22:28:34.983455613Z 2026-08-04 22:28:34,983 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:34] \"\u001b[35m\u001b[1mGET /orders/1001 HTTP/1.1\u001b[0m\" 500 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 63,
+        "text": "2026-08-04T22:28:38.982478317Z 2026-08-04 22:28:38,982 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:38] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 64,
+        "text": "2026-08-04T22:28:40.051082807Z 2026-08-04 22:28:40,050 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:40] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 65,
+        "text": "2026-08-04T22:28:43.355929005Z 2026-08-04 22:28:43,355 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:43] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 66,
+        "text": "2026-08-04T22:28:43.982422730Z 2026-08-04 22:28:43,982 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:43] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 67,
+        "text": "2026-08-04T22:28:46.257252345Z 2026-08-04 22:28:46,256 ERROR [orders-api] unhandled exception serving /orders/1001",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 68,
+        "text": "2026-08-04T22:28:46.257272261Z Traceback (most recent call last):",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 69,
+        "text": "2026-08-04T22:28:46.257273750Z   File \"/usr/local/lib/python3.11/site-packages/flask/app.py\", line 880, in full_dispatch_request",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 70,
+        "text": "2026-08-04T22:28:46.257275080Z     rv = self.dispatch_request()",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 71,
+        "text": "2026-08-04T22:28:46.257276077Z          ^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 72,
+        "text": "2026-08-04T22:28:46.257277123Z   File \"/usr/local/lib/python3.11/site-packages/flask/app.py\", line 865, in dispatch_request",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 73,
+        "text": "2026-08-04T22:28:46.257278146Z     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 74,
+        "text": "2026-08-04T22:28:46.257279300Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 75,
+        "text": "2026-08-04T22:28:46.257280327Z   File \"/app/main.py\", line 106, in get_order",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 76,
+        "text": "2026-08-04T22:28:46.257291021Z     flags = load_feature_flags()",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 77,
+        "text": "2026-08-04T22:28:46.257292051Z             ^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 78,
+        "text": "2026-08-04T22:28:46.257293321Z   File \"/app/main.py\", line 83, in load_feature_flags",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 79,
+        "text": "2026-08-04T22:28:46.257294355Z     return json.loads(RAW_FEATURE_FLAGS)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 80,
+        "text": "2026-08-04T22:28:46.257295320Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 81,
+        "text": "2026-08-04T22:28:46.257296329Z   File \"/usr/local/lib/python3.11/json/__init__.py\", line 346, in loads",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 82,
+        "text": "2026-08-04T22:28:46.257297317Z     return _default_decoder.decode(s)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 83,
+        "text": "2026-08-04T22:28:46.257298289Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 84,
+        "text": "2026-08-04T22:28:46.257299280Z   File \"/usr/local/lib/python3.11/json/decoder.py\", line 337, in decode",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 85,
+        "text": "2026-08-04T22:28:46.257300253Z     obj, end = self.raw_decode(s, idx=_w(s, 0).end())",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 86,
+        "text": "2026-08-04T22:28:46.257301208Z                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 87,
+        "text": "2026-08-04T22:28:46.257302172Z   File \"/usr/local/lib/python3.11/json/decoder.py\", line 355, in raw_decode",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 88,
+        "text": "2026-08-04T22:28:46.257303297Z     raise JSONDecodeError(\"Expecting value\", s, err.value) from None",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 89,
+        "text": "2026-08-04T22:28:46.257304319Z json.decoder.JSONDecodeError: Expecting value: line 1 column 41 (char 40)",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 90,
+        "text": "2026-08-04T22:28:46.257615506Z 2026-08-04 22:28:46,257 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:46] \"\u001b[35m\u001b[1mGET /orders/1001 HTTP/1.1\u001b[0m\" 500 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 91,
+        "text": "2026-08-04T22:28:48.980314161Z 2026-08-04 22:28:48,980 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:48] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 92,
+        "text": "2026-08-04T22:28:51.339174072Z 2026-08-04 22:28:51,339 INFO [werkzeug] 172.18.0.2 - - [04/Aug/2026 22:28:51] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 93,
+        "text": "2026-08-04T22:28:53.354470768Z 2026-08-04 22:28:53,354 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:53] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 94,
+        "text": "2026-08-04T22:28:53.429419102Z 2026-08-04 22:28:53,429 INFO [werkzeug] 10.244.1.51 - - [04/Aug/2026 22:28:53] \"GET /healthz HTTP/1.1\" 200 -",
+        "previous": false
+      },
+      {
+        "pod": "orders-api-85ddb6cf4d-jjrcq",
+        "container": "orders-api",
+        "index": 95,
+        "text": "2026-08-04T22:28:53.980496876Z 2026-08-04 22:28:53,980 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:28:53] \"GET /readyz HTTP/1.1\" 200 -",
+        "previous": false
+      }
+    ],
+    "per_container": {
+      "orders-api-85ddb6cf4d-8xjpr/orders-api": {
+        "current": "ok",
+        "previous": "no_previous",
+        "generation": "current"
+      },
+      "orders-api-85ddb6cf4d-jjrcq/orders-api": {
+        "current": "ok",
+        "previous": "no_previous",
+        "generation": "current"
+      }
+    }
+  },
+  "events": [
+    {
+      "type": "Normal",
+      "reason": "Scheduled",
+      "message": "Successfully assigned shop/orders-api-85ddb6cf4d-8xjpr to sre-lab-worker",
+      "involved_object": "Pod/orders-api-85ddb6cf4d-8xjpr",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:07+00:00",
+      "last_seen": "2026-08-04T22:28:07+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Pulled",
+      "message": "Container image \"orders-api:v1.0.0\" already present on machine and can be accessed by the pod",
+      "involved_object": "Pod/orders-api-85ddb6cf4d-8xjpr",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:07+00:00",
+      "last_seen": "2026-08-04T22:28:07+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Created",
+      "message": "Container created",
+      "involved_object": "Pod/orders-api-85ddb6cf4d-8xjpr",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:07+00:00",
+      "last_seen": "2026-08-04T22:28:07+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Started",
+      "message": "Container started",
+      "involved_object": "Pod/orders-api-85ddb6cf4d-8xjpr",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:07+00:00",
+      "last_seen": "2026-08-04T22:28:07+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "SuccessfulCreate",
+      "message": "Created pod: orders-api-85ddb6cf4d-8xjpr",
+      "involved_object": "ReplicaSet/orders-api-85ddb6cf4d",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:07+00:00",
+      "last_seen": "2026-08-04T22:28:07+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Killing",
+      "message": "Stopping container orders-api",
+      "involved_object": "Pod/orders-api-688649cf7b-zmzp6",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:13+00:00",
+      "last_seen": "2026-08-04T22:28:13+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "SuccessfulDelete",
+      "message": "Deleted pod: orders-api-688649cf7b-zmzp6",
+      "involved_object": "ReplicaSet/orders-api-688649cf7b",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:13+00:00",
+      "last_seen": "2026-08-04T22:28:13+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Scheduled",
+      "message": "Successfully assigned shop/orders-api-85ddb6cf4d-jjrcq to sre-lab-worker",
+      "involved_object": "Pod/orders-api-85ddb6cf4d-jjrcq",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:13+00:00",
+      "last_seen": "2026-08-04T22:28:13+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Pulled",
+      "message": "Container image \"orders-api:v1.0.0\" already present on machine and can be accessed by the pod",
+      "involved_object": "Pod/orders-api-85ddb6cf4d-jjrcq",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:13+00:00",
+      "last_seen": "2026-08-04T22:28:13+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Created",
+      "message": "Container created",
+      "involved_object": "Pod/orders-api-85ddb6cf4d-jjrcq",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:13+00:00",
+      "last_seen": "2026-08-04T22:28:13+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Started",
+      "message": "Container started",
+      "involved_object": "Pod/orders-api-85ddb6cf4d-jjrcq",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:13+00:00",
+      "last_seen": "2026-08-04T22:28:13+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "SuccessfulCreate",
+      "message": "Created pod: orders-api-85ddb6cf4d-jjrcq",
+      "involved_object": "ReplicaSet/orders-api-85ddb6cf4d",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:13+00:00",
+      "last_seen": "2026-08-04T22:28:13+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Killing",
+      "message": "Stopping container orders-api",
+      "involved_object": "Pod/orders-api-688649cf7b-xws9p",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:19+00:00",
+      "last_seen": "2026-08-04T22:28:19+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "SuccessfulDelete",
+      "message": "Deleted pod: orders-api-688649cf7b-xws9p",
+      "involved_object": "ReplicaSet/orders-api-688649cf7b",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:19+00:00",
+      "last_seen": "2026-08-04T22:28:19+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "ScalingReplicaSet",
+      "message": "(combined from similar events): Scaled down replica set orders-api-688649cf7b from 1 to 0",
+      "involved_object": "Deployment/orders-api",
+      "count": 25,
+      "first_seen": "2026-08-03T21:32:44+00:00",
+      "last_seen": "2026-08-04T22:28:19+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Scheduled",
+      "message": "Successfully assigned shop/curl-probe to sre-lab-worker",
+      "involved_object": "Pod/curl-probe",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:52+00:00",
+      "last_seen": "2026-08-04T22:28:52+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Pulled",
+      "message": "Container image \"curlimages/curl:8.8.0\" already present on machine and can be accessed by the pod",
+      "involved_object": "Pod/curl-probe",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:53+00:00",
+      "last_seen": "2026-08-04T22:28:53+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Created",
+      "message": "Container created",
+      "involved_object": "Pod/curl-probe",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:53+00:00",
+      "last_seen": "2026-08-04T22:28:53+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Started",
+      "message": "Container started",
+      "involved_object": "Pod/curl-probe",
+      "count": 1,
+      "first_seen": "2026-08-04T22:28:53+00:00",
+      "last_seen": "2026-08-04T22:28:53+00:00"
+    }
+  ],
+  "rollouts": [
+    {
+      "revision": 37,
+      "created_at": "2026-08-03T21:48:33+00:00",
+      "image": "orders-api:v1.0.0",
+      "change_cause": null,
+      "is_current": true
+    }
+  ],
+  "workload_spec": {
+    "annotations": {
+      "deployment.kubernetes.io/revision": "37",
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{\"sre-lab/scenario\":\"05-unhandled-exception\"},\"labels\":{\"app\":\"orders-api\"},\"name\":\"orders-api\",\"namespace\":\"shop\"},\"spec\":{\"replicas\":2,\"selector\":{\"matchLabels\":{\"app\":\"orders-api\"}},\"template\":{\"metadata\":{\"labels\":{\"app\":\"orders-api\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"DATABASE_URL\",\"value\":\"postgres://app:secret@postgres.shop.svc:5432/orders\"},{\"name\":\"FEATURE_FLAGS\",\"value\":\"{\\\"enrich_region\\\": true, \\\"beta_pricing\\\": }\"}],\"image\":\"orders-api:v1.0.0\",\"imagePullPolicy\":\"IfNotPresent\",\"livenessProbe\":{\"httpGet\":{\"path\":\"/healthz\",\"port\":8080},\"initialDelaySeconds\":5,\"periodSeconds\":10},\"name\":\"orders-api\",\"ports\":[{\"containerPort\":8080}],\"readinessProbe\":{\"httpGet\":{\"path\":\"/readyz\",\"port\":8080},\"initialDelaySeconds\":3,\"periodSeconds\":5},\"resources\":{\"limits\":{\"cpu\":\"500m\",\"memory\":\"256Mi\"},\"requests\":{\"cpu\":\"50m\",\"memory\":\"64Mi\"}}}]}}}}\n",
+      "sre-lab/scenario": "05-unhandled-exception"
+    },
+    "replicas": 2,
+    "containers": [
+      {
+        "name": "orders-api",
+        "image": "orders-api:v1.0.0",
+        "ports": [
+          {
+            "containerPort": 8080
+          }
+        ],
+        "env": {
+          "DATABASE_URL": "postgres://app:secret@postgres.shop.svc:5432/orders",
+          "FEATURE_FLAGS": "{\"enrich_region\": true, \"beta_pricing\": }"
+        },
+        "resources": {
+          "limits": {
+            "cpu": "500m",
+            "memory": "256Mi"
+          },
+          "requests": {
+            "cpu": "50m",
+            "memory": "64Mi"
+          }
+        },
+        "readinessProbe": {
+          "path": "/readyz",
+          "port": 8080,
+          "initialDelaySeconds": 3,
+          "periodSeconds": 5
+        },
+        "livenessProbe": {
+          "path": "/healthz",
+          "port": 8080,
+          "initialDelaySeconds": 5,
+          "periodSeconds": 10
+        }
+      }
+    ]
+  },
+  "endpoint_count": 2,
+  "expected_replicas": 2,
+  "ready_replicas": 2,
+  "current_gen_pods": 2,
+  "current_gen_ready": 2,
+  "previous_gen_ready": 0,
+  "collection_errors": []
+}

@@ -3,7 +3,8 @@
     "allow": [
       "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); kubectl version --client)",
       "PowerShell(Get-Command make -ErrorAction SilentlyContinue)",
-      "PowerShell(Get-Command mingw32-make -ErrorAction SilentlyContinue)"
+      "PowerShell(Get-Command mingw32-make -ErrorAction SilentlyContinue)",
+      "Bash(git add *)"
     ]
   }
 }

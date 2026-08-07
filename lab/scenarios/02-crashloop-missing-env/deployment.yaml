@@ -6,6 +6,8 @@ metadata:
   labels:
     app: orders-api
   annotations:
+    sre.agent/repo: "https://github.com/yerratejaswi/ai-sre-agent"
+    sre.agent/source-root: "lab/app"
     sre-lab/scenario: "02-crashloop-missing-env"
 spec:
   replicas: 2
