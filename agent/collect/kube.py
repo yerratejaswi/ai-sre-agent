@@ -43,6 +43,25 @@ from agent.models import (
 
 LOG_TAIL = 200
 
+# Annotations stripped before evidence leaves the collector.
+# sre-lab/* is the answer key; last-applied-configuration is a verbatim copy
+# of the source YAML that carries those same answer-key annotations as a
+# nested string — stripping only the top-level key leaves the answer visible.
+LEAKY_ANNOTATION_PREFIXES = ("sre-lab/",)
+DROPPED_ANNOTATIONS = ("kubectl.kubernetes.io/last-applied-configuration",)
+
+
+def _clean_annotations(annotations: dict[str, str] | None) -> dict[str, str]:
+    """Strip lab-only and redundant annotations at the collector boundary."""
+    if not annotations:
+        return {}
+    return {
+        k: v
+        for k, v in annotations.items()
+        if not k.startswith(LEAKY_ANNOTATION_PREFIXES)
+        and k not in DROPPED_ANNOTATIONS
+    }
+
 
 def load_kube_config(context: Optional[str] = "kind-sre-lab") -> None:
     """Prefer in-cluster credentials, fall back to the local kubeconfig."""
@@ -459,14 +478,7 @@ class Collector:
                 }
             )
 
-        # The lab tags each Deployment with its scenario id. That label is the
-        # answer key — leaking it into IncidentContext would make every eval
-        # score meaningless. Drop it at the boundary.
-        annotations = {
-            k: v
-            for k, v in (deploy.metadata.annotations or {}).items()
-            if not k.startswith("sre-lab/")
-        }
+        annotations = _clean_annotations(deploy.metadata.annotations)
 
         spec = {
             "annotations": annotations,

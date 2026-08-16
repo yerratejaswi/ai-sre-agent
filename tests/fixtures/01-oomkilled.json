@@ -7,37 +7,37 @@
     "workload": "orders-api",
     "reason": "ManualInvestigation",
     "summary": "manual collection for shop/orders-api",
-    "first_seen": "2026-08-04T22:25:24.324626+00:00",
-    "last_seen": "2026-08-04T22:25:24.324626+00:00",
+    "first_seen": "2026-08-15T23:01:30.484750+00:00",
+    "last_seen": "2026-08-15T23:01:30.484750+00:00",
     "evidence": {}
   },
   "namespace": "shop",
   "workload": "orders-api",
   "window": {
-    "t0": "2026-08-04T22:24:51+00:00",
+    "t0": "2026-08-15T22:52:20+00:00",
     "lookback_seconds": 1800,
     "t0_source": "Warning event BackOff"
   },
-  "collected_at": "2026-08-04T22:25:24.415074+00:00",
+  "collected_at": "2026-08-15T23:01:30.734441+00:00",
   "pods": [
     {
-      "name": "orders-api-6648dfcdb4-dwhzg",
+      "name": "orders-api-6648dfcdb4-9w44v",
       "phase": "Running",
-      "ready": false,
+      "ready": true,
       "node": "sre-lab-worker",
-      "created_at": "2026-08-04T22:24:43+00:00",
+      "created_at": "2026-08-15T22:52:11+00:00",
       "containers": [
         {
           "name": "orders-api",
-          "ready": false,
-          "started": false,
-          "restart_count": 2,
-          "phase": "Waiting",
-          "waiting_reason": "CrashLoopBackOff",
-          "waiting_message": "back-off 20s restarting failed container=orders-api pod=orders-api-6648dfcdb4-dwhzg_shop(9a034ca7-1505-4c29-a9c4-e5dedc33b210)",
+          "ready": true,
+          "started": true,
+          "restart_count": 5,
+          "phase": "Running",
+          "waiting_reason": null,
+          "waiting_message": null,
           "last_terminated_reason": "OOMKilled",
           "last_terminated_exit_code": 137,
-          "last_terminated_at": "2026-08-04T22:25:14+00:00",
+          "last_terminated_at": "2026-08-15T22:54:02+00:00",
           "image": "docker.io/library/orders-api:v1.0.0",
           "memory_limit": "96Mi",
           "memory_request": "64Mi",
@@ -47,31 +47,31 @@
       "conditions": {
         "PodReadyToStartContainers": "True",
         "Initialized": "True",
-        "Ready": "False",
-        "ContainersReady": "False",
+        "Ready": "True",
+        "ContainersReady": "True",
         "PodScheduled": "True"
       },
       "owner": "orders-api-6648dfcdb4",
       "generation": "current"
     },
     {
-      "name": "orders-api-6648dfcdb4-flqhm",
+      "name": "orders-api-6648dfcdb4-b4jdb",
       "phase": "Running",
-      "ready": false,
+      "ready": true,
       "node": "sre-lab-worker",
-      "created_at": "2026-08-04T22:24:37+00:00",
+      "created_at": "2026-08-15T22:52:05+00:00",
       "containers": [
         {
           "name": "orders-api",
-          "ready": false,
-          "started": false,
-          "restart_count": 2,
-          "phase": "Waiting",
-          "waiting_reason": "CrashLoopBackOff",
-          "waiting_message": "back-off 20s restarting failed container=orders-api pod=orders-api-6648dfcdb4-flqhm_shop(521922b2-4368-4c5d-a04e-e2849a8135e9)",
+          "ready": true,
+          "started": true,
+          "restart_count": 6,
+          "phase": "Running",
+          "waiting_reason": null,
+          "waiting_message": null,
           "last_terminated_reason": "OOMKilled",
           "last_terminated_exit_code": 137,
-          "last_terminated_at": "2026-08-04T22:25:08+00:00",
+          "last_terminated_at": "2026-08-15T22:55:31+00:00",
           "image": "docker.io/library/orders-api:v1.0.0",
           "memory_limit": "96Mi",
           "memory_request": "64Mi",
@@ -81,8 +81,8 @@
       "conditions": {
         "PodReadyToStartContainers": "True",
         "Initialized": "True",
-        "Ready": "False",
-        "ContainersReady": "False",
+        "Ready": "True",
+        "ContainersReady": "True",
         "PodScheduled": "True"
       },
       "owner": "orders-api-6648dfcdb4",
@@ -94,489 +94,461 @@
     "previous_status": "ok",
     "lines": [
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 0,
-        "text": "2026-08-04T22:25:08.794256725Z 2026-08-04 22:25:08,793 INFO [orders-api] connecting to database at postgres.shop.svc:5432/orders",
+        "text": "2026-08-15T23:01:25.248380299Z 2026-08-15 23:01:25,247 INFO [orders-api] connecting to database at postgres.shop.svc:5432/orders",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 1,
-        "text": "2026-08-04T22:25:08.794302416Z 2026-08-04 22:25:08,794 WARNING [orders-api] MEMORY_BALLAST_MB=512; allocating in background",
+        "text": "2026-08-15T23:01:25.248699023Z 2026-08-15 23:01:25,248 WARNING [orders-api] MEMORY_BALLAST_MB=512; allocating in background",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 2,
-        "text": "2026-08-04T22:25:08.795107920Z 2026-08-04 22:25:08,794 INFO [orders-api] heap grew to approximately 0 MiB",
+        "text": "2026-08-15T23:01:25.250338462Z 2026-08-15 23:01:25,249 INFO [orders-api] heap grew to approximately 0 MiB",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 3,
-        "text": "2026-08-04T22:25:08.796179468Z 2026-08-04 22:25:08,795 INFO [orders-api] orders-api listening on :8080",
+        "text": "2026-08-15T23:01:25.255303682Z 2026-08-15 23:01:25,254 INFO [orders-api] orders-api listening on :8080",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 4,
-        "text": "2026-08-04T22:25:08.796340094Z  * Serving Flask app 'main'",
+        "text": "2026-08-15T23:01:25.256269093Z  * Serving Flask app 'main'",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 5,
-        "text": "2026-08-04T22:25:08.796348021Z  * Debug mode: off",
+        "text": "2026-08-15T23:01:25.256300914Z  * Debug mode: off",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 6,
-        "text": "2026-08-04T22:25:08.798843583Z 2026-08-04 22:25:08,798 INFO [werkzeug] \u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m",
+        "text": "2026-08-15T23:01:25.262137083Z 2026-08-15 23:01:25,261 INFO [werkzeug] \u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 7,
-        "text": "2026-08-04T22:25:08.798860893Z  * Running on all addresses (0.0.0.0)",
+        "text": "2026-08-15T23:01:25.262211921Z  * Running on all addresses (0.0.0.0)",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 8,
-        "text": "2026-08-04T22:25:08.798863450Z  * Running on http://127.0.0.1:8080",
+        "text": "2026-08-15T23:01:25.262221102Z  * Running on http://127.0.0.1:8080",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 9,
-        "text": "2026-08-04T22:25:08.798865152Z  * Running on http://10.244.1.43:8080",
+        "text": "2026-08-15T23:01:25.262224874Z  * Running on http://10.244.1.5:8080",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 10,
-        "text": "2026-08-04T22:25:08.798867103Z 2026-08-04 22:25:08,798 INFO [werkzeug] \u001b[33mPress CTRL+C to quit\u001b[0m",
+        "text": "2026-08-15T23:01:25.262232011Z 2026-08-15 23:01:25,261 INFO [werkzeug] \u001b[33mPress CTRL+C to quit\u001b[0m",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 11,
-        "text": "2026-08-04T22:25:10.088711790Z 2026-08-04 22:25:10,088 INFO [orders-api] heap grew to approximately 16 MiB",
+        "text": "2026-08-15T23:01:26.555964907Z 2026-08-15 23:01:26,555 INFO [orders-api] heap grew to approximately 16 MiB",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 12,
-        "text": "2026-08-04T22:25:11.388108919Z 2026-08-04 22:25:11,387 INFO [orders-api] heap grew to approximately 32 MiB",
+        "text": "2026-08-15T23:01:27.856211212Z 2026-08-15 23:01:27,855 INFO [orders-api] heap grew to approximately 32 MiB",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 13,
-        "text": "2026-08-04T22:25:12.683767450Z 2026-08-04 22:25:12,683 INFO [orders-api] heap grew to approximately 48 MiB",
+        "text": "2026-08-15T23:01:29.160953146Z 2026-08-15 23:01:29,160 INFO [orders-api] heap grew to approximately 48 MiB",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 14,
-        "text": "2026-08-04T22:25:13.595231556Z 2026-08-04 22:25:13,594 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:25:13] \"GET /readyz HTTP/1.1\" 200 -",
+        "text": "2026-08-15T23:01:29.391976434Z 2026-08-15 23:01:29,391 INFO [werkzeug] 10.244.1.1 - - [15/Aug/2026 23:01:29] \"GET /readyz HTTP/1.1\" 200 -",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
-        "container": "orders-api",
-        "index": 15,
-        "text": "2026-08-04T22:25:13.893895916Z 2026-08-04 22:25:13,893 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:25:13] \"GET /healthz HTTP/1.1\" 200 -",
-        "previous": false
-      },
-      {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
-        "container": "orders-api",
-        "index": 16,
-        "text": "2026-08-04T22:25:13.979951593Z 2026-08-04 22:25:13,979 INFO [orders-api] heap grew to approximately 64 MiB",
-        "previous": false
-      },
-      {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 0,
-        "text": "2026-08-04T22:25:08.794256725Z 2026-08-04 22:25:08,793 INFO [orders-api] connecting to database at postgres.shop.svc:5432/orders",
+        "text": "2026-08-15T22:53:56.763444893Z 2026-08-15 22:53:56,712 INFO [orders-api] connecting to database at postgres.shop.svc:5432/orders",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 1,
-        "text": "2026-08-04T22:25:08.794302416Z 2026-08-04 22:25:08,794 WARNING [orders-api] MEMORY_BALLAST_MB=512; allocating in background",
+        "text": "2026-08-15T22:53:56.763874040Z 2026-08-15 22:53:56,763 WARNING [orders-api] MEMORY_BALLAST_MB=512; allocating in background",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 2,
-        "text": "2026-08-04T22:25:08.795107920Z 2026-08-04 22:25:08,794 INFO [orders-api] heap grew to approximately 0 MiB",
+        "text": "2026-08-15T22:53:56.766082480Z 2026-08-15 22:53:56,765 INFO [orders-api] heap grew to approximately 0 MiB",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 3,
-        "text": "2026-08-04T22:25:08.796179468Z 2026-08-04 22:25:08,795 INFO [orders-api] orders-api listening on :8080",
+        "text": "2026-08-15T22:53:56.770038316Z 2026-08-15 22:53:56,769 INFO [orders-api] orders-api listening on :8080",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 4,
-        "text": "2026-08-04T22:25:08.796340094Z  * Serving Flask app 'main'",
+        "text": "2026-08-15T22:53:56.770573653Z  * Serving Flask app 'main'",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 5,
-        "text": "2026-08-04T22:25:08.796348021Z  * Debug mode: off",
+        "text": "2026-08-15T22:53:56.770592337Z  * Debug mode: off",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 6,
-        "text": "2026-08-04T22:25:08.798843583Z 2026-08-04 22:25:08,798 INFO [werkzeug] \u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m",
+        "text": "2026-08-15T22:53:56.775501568Z 2026-08-15 22:53:56,775 INFO [werkzeug] \u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 7,
-        "text": "2026-08-04T22:25:08.798860893Z  * Running on all addresses (0.0.0.0)",
+        "text": "2026-08-15T22:53:56.775525439Z  * Running on all addresses (0.0.0.0)",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 8,
-        "text": "2026-08-04T22:25:08.798863450Z  * Running on http://127.0.0.1:8080",
+        "text": "2026-08-15T22:53:56.775528415Z  * Running on http://127.0.0.1:8080",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 9,
-        "text": "2026-08-04T22:25:08.798865152Z  * Running on http://10.244.1.43:8080",
+        "text": "2026-08-15T22:53:56.775530965Z  * Running on http://10.244.1.5:8080",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 10,
-        "text": "2026-08-04T22:25:08.798867103Z 2026-08-04 22:25:08,798 INFO [werkzeug] \u001b[33mPress CTRL+C to quit\u001b[0m",
+        "text": "2026-08-15T22:53:56.776086206Z 2026-08-15 22:53:56,775 INFO [werkzeug] \u001b[33mPress CTRL+C to quit\u001b[0m",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 11,
-        "text": "2026-08-04T22:25:10.088711790Z 2026-08-04 22:25:10,088 INFO [orders-api] heap grew to approximately 16 MiB",
+        "text": "2026-08-15T22:53:58.086978982Z 2026-08-15 22:53:58,086 INFO [orders-api] heap grew to approximately 16 MiB",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 12,
-        "text": "2026-08-04T22:25:11.388108919Z 2026-08-04 22:25:11,387 INFO [orders-api] heap grew to approximately 32 MiB",
+        "text": "2026-08-15T22:53:59.414721460Z 2026-08-15 22:53:59,414 INFO [orders-api] heap grew to approximately 32 MiB",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 13,
-        "text": "2026-08-04T22:25:12.683767450Z 2026-08-04 22:25:12,683 INFO [orders-api] heap grew to approximately 48 MiB",
+        "text": "2026-08-15T22:54:00.756547331Z 2026-08-15 22:54:00,756 INFO [orders-api] heap grew to approximately 48 MiB",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 14,
-        "text": "2026-08-04T22:25:13.595231556Z 2026-08-04 22:25:13,594 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:25:13] \"GET /readyz HTTP/1.1\" 200 -",
+        "text": "2026-08-15T22:54:02.053420757Z 2026-08-15 22:54:02,053 INFO [orders-api] heap grew to approximately 64 MiB",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 15,
-        "text": "2026-08-04T22:25:13.893895916Z 2026-08-04 22:25:13,893 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:25:13] \"GET /healthz HTTP/1.1\" 200 -",
+        "text": "2026-08-15T22:54:02.264537187Z 2026-08-15 22:54:02,263 INFO [werkzeug] 10.244.1.1 - - [15/Aug/2026 22:54:02] \"GET /readyz HTTP/1.1\" 200 -",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-dwhzg",
+        "pod": "orders-api-6648dfcdb4-9w44v",
         "container": "orders-api",
         "index": 16,
-        "text": "2026-08-04T22:25:13.979951593Z 2026-08-04 22:25:13,979 INFO [orders-api] heap grew to approximately 64 MiB",
+        "text": "2026-08-15T22:54:02.303085269Z 2026-08-15 22:54:02,302 INFO [werkzeug] 10.244.1.1 - - [15/Aug/2026 22:54:02] \"GET /healthz HTTP/1.1\" 200 -",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 0,
-        "text": "2026-08-04T22:25:02.697604470Z 2026-08-04 22:25:02,696 INFO [orders-api] connecting to database at postgres.shop.svc:5432/orders",
+        "text": "2026-08-15T23:01:23.875752212Z 2026-08-15 23:01:23,875 INFO [orders-api] connecting to database at postgres.shop.svc:5432/orders",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 1,
-        "text": "2026-08-04T22:25:02.698883866Z 2026-08-04 22:25:02,696 WARNING [orders-api] MEMORY_BALLAST_MB=512; allocating in background",
+        "text": "2026-08-15T23:01:23.875844242Z 2026-08-15 23:01:23,875 WARNING [orders-api] MEMORY_BALLAST_MB=512; allocating in background",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 2,
-        "text": "2026-08-04T22:25:02.699280819Z 2026-08-04 22:25:02,698 INFO [orders-api] heap grew to approximately 0 MiB",
+        "text": "2026-08-15T23:01:23.942102832Z 2026-08-15 23:01:23,941 INFO [orders-api] heap grew to approximately 0 MiB",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 3,
-        "text": "2026-08-04T22:25:02.701276127Z 2026-08-04 22:25:02,700 INFO [orders-api] orders-api listening on :8080",
+        "text": "2026-08-15T23:01:23.954800658Z 2026-08-15 23:01:23,943 INFO [orders-api] orders-api listening on :8080",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 4,
-        "text": "2026-08-04T22:25:02.701617542Z  * Serving Flask app 'main'",
+        "text": "2026-08-15T23:01:23.954892810Z  * Serving Flask app 'main'",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 5,
-        "text": "2026-08-04T22:25:02.701639645Z  * Debug mode: off",
+        "text": "2026-08-15T23:01:23.954907950Z  * Debug mode: off",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 6,
-        "text": "2026-08-04T22:25:02.704361041Z 2026-08-04 22:25:02,704 INFO [werkzeug] \u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m",
+        "text": "2026-08-15T23:01:23.956960866Z 2026-08-15 23:01:23,956 INFO [werkzeug] \u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 7,
-        "text": "2026-08-04T22:25:02.704389053Z  * Running on all addresses (0.0.0.0)",
+        "text": "2026-08-15T23:01:23.957013799Z  * Running on all addresses (0.0.0.0)",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 8,
-        "text": "2026-08-04T22:25:02.704390279Z  * Running on http://127.0.0.1:8080",
+        "text": "2026-08-15T23:01:23.957018576Z  * Running on http://127.0.0.1:8080",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 9,
-        "text": "2026-08-04T22:25:02.704391214Z  * Running on http://10.244.1.42:8080",
+        "text": "2026-08-15T23:01:23.957020579Z  * Running on http://10.244.1.4:8080",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 10,
-        "text": "2026-08-04T22:25:02.704392470Z 2026-08-04 22:25:02,704 INFO [werkzeug] \u001b[33mPress CTRL+C to quit\u001b[0m",
+        "text": "2026-08-15T23:01:23.957022850Z 2026-08-15 23:01:23,956 INFO [werkzeug] \u001b[33mPress CTRL+C to quit\u001b[0m",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 11,
-        "text": "2026-08-04T22:25:03.994743914Z 2026-08-04 22:25:03,994 INFO [orders-api] heap grew to approximately 16 MiB",
+        "text": "2026-08-15T23:01:25.304734341Z 2026-08-15 23:01:25,304 INFO [orders-api] heap grew to approximately 16 MiB",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 12,
-        "text": "2026-08-04T22:25:05.290336071Z 2026-08-04 22:25:05,290 INFO [orders-api] heap grew to approximately 32 MiB",
+        "text": "2026-08-15T23:01:26.613344680Z 2026-08-15 23:01:26,612 INFO [orders-api] heap grew to approximately 32 MiB",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 13,
-        "text": "2026-08-04T22:25:06.593933655Z 2026-08-04 22:25:06,593 INFO [orders-api] heap grew to approximately 48 MiB",
+        "text": "2026-08-15T23:01:27.965269872Z 2026-08-15 23:01:27,964 INFO [orders-api] heap grew to approximately 48 MiB",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 14,
-        "text": "2026-08-04T22:25:07.566963457Z 2026-08-04 22:25:07,566 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:25:07] \"GET /healthz HTTP/1.1\" 200 -",
+        "text": "2026-08-15T23:01:28.387607003Z 2026-08-15 23:01:28,387 INFO [werkzeug] 10.244.1.1 - - [15/Aug/2026 23:01:28] \"GET /readyz HTTP/1.1\" 200 -",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 15,
-        "text": "2026-08-04T22:25:07.583904838Z 2026-08-04 22:25:07,583 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:25:07] \"GET /readyz HTTP/1.1\" 200 -",
+        "text": "2026-08-15T23:01:29.285761164Z 2026-08-15 23:01:29,269 INFO [orders-api] heap grew to approximately 64 MiB",
         "previous": false
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
-        "container": "orders-api",
-        "index": 16,
-        "text": "2026-08-04T22:25:07.893663893Z 2026-08-04 22:25:07,893 INFO [orders-api] heap grew to approximately 64 MiB",
-        "previous": false
-      },
-      {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 0,
-        "text": "2026-08-04T22:25:02.697604470Z 2026-08-04 22:25:02,696 INFO [orders-api] connecting to database at postgres.shop.svc:5432/orders",
+        "text": "2026-08-15T22:55:22.789425098Z 2026-08-15 22:55:22,788 INFO [orders-api] connecting to database at postgres.shop.svc:5432/orders",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 1,
-        "text": "2026-08-04T22:25:02.698883866Z 2026-08-04 22:25:02,696 WARNING [orders-api] MEMORY_BALLAST_MB=512; allocating in background",
+        "text": "2026-08-15T22:55:22.789501926Z 2026-08-15 22:55:22,789 WARNING [orders-api] MEMORY_BALLAST_MB=512; allocating in background",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 2,
-        "text": "2026-08-04T22:25:02.699280819Z 2026-08-04 22:25:02,698 INFO [orders-api] heap grew to approximately 0 MiB",
+        "text": "2026-08-15T22:55:22.792439879Z 2026-08-15 22:55:22,792 INFO [orders-api] heap grew to approximately 0 MiB",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 3,
-        "text": "2026-08-04T22:25:02.701276127Z 2026-08-04 22:25:02,700 INFO [orders-api] orders-api listening on :8080",
+        "text": "2026-08-15T22:55:22.794154719Z 2026-08-15 22:55:22,793 INFO [orders-api] orders-api listening on :8080",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 4,
-        "text": "2026-08-04T22:25:02.701617542Z  * Serving Flask app 'main'",
+        "text": "2026-08-15T22:55:22.794481292Z  * Serving Flask app 'main'",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 5,
-        "text": "2026-08-04T22:25:02.701639645Z  * Debug mode: off",
+        "text": "2026-08-15T22:55:22.794492160Z  * Debug mode: off",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 6,
-        "text": "2026-08-04T22:25:02.704361041Z 2026-08-04 22:25:02,704 INFO [werkzeug] \u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m",
+        "text": "2026-08-15T22:55:22.798178050Z 2026-08-15 22:55:22,797 INFO [werkzeug] \u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 7,
-        "text": "2026-08-04T22:25:02.704389053Z  * Running on all addresses (0.0.0.0)",
+        "text": "2026-08-15T22:55:22.798198178Z  * Running on all addresses (0.0.0.0)",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 8,
-        "text": "2026-08-04T22:25:02.704390279Z  * Running on http://127.0.0.1:8080",
+        "text": "2026-08-15T22:55:22.798201211Z  * Running on http://127.0.0.1:8080",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 9,
-        "text": "2026-08-04T22:25:02.704391214Z  * Running on http://10.244.1.42:8080",
+        "text": "2026-08-15T22:55:22.798203308Z  * Running on http://10.244.1.4:8080",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 10,
-        "text": "2026-08-04T22:25:02.704392470Z 2026-08-04 22:25:02,704 INFO [werkzeug] \u001b[33mPress CTRL+C to quit\u001b[0m",
+        "text": "2026-08-15T22:55:22.798210248Z 2026-08-15 22:55:22,797 INFO [werkzeug] \u001b[33mPress CTRL+C to quit\u001b[0m",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 11,
-        "text": "2026-08-04T22:25:03.994743914Z 2026-08-04 22:25:03,994 INFO [orders-api] heap grew to approximately 16 MiB",
+        "text": "2026-08-15T22:55:24.120723692Z 2026-08-15 22:55:24,120 INFO [orders-api] heap grew to approximately 16 MiB",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 12,
-        "text": "2026-08-04T22:25:05.290336071Z 2026-08-04 22:25:05,290 INFO [orders-api] heap grew to approximately 32 MiB",
+        "text": "2026-08-15T22:55:25.442355393Z 2026-08-15 22:55:25,441 INFO [orders-api] heap grew to approximately 32 MiB",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 13,
-        "text": "2026-08-04T22:25:06.593933655Z 2026-08-04 22:25:06,593 INFO [orders-api] heap grew to approximately 48 MiB",
+        "text": "2026-08-15T22:55:26.762435797Z 2026-08-15 22:55:26,761 INFO [orders-api] heap grew to approximately 48 MiB",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 14,
-        "text": "2026-08-04T22:25:07.566963457Z 2026-08-04 22:25:07,566 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:25:07] \"GET /healthz HTTP/1.1\" 200 -",
+        "text": "2026-08-15T22:55:27.507032826Z 2026-08-15 22:55:27,502 INFO [werkzeug] 10.244.1.1 - - [15/Aug/2026 22:55:27] \"GET /readyz HTTP/1.1\" 200 -",
         "previous": true
       },
       {
-        "pod": "orders-api-6648dfcdb4-flqhm",
+        "pod": "orders-api-6648dfcdb4-b4jdb",
         "container": "orders-api",
         "index": 15,
-        "text": "2026-08-04T22:25:07.583904838Z 2026-08-04 22:25:07,583 INFO [werkzeug] 10.244.1.1 - - [04/Aug/2026 22:25:07] \"GET /readyz HTTP/1.1\" 200 -",
-        "previous": true
-      },
-      {
-        "pod": "orders-api-6648dfcdb4-flqhm",
-        "container": "orders-api",
-        "index": 16,
-        "text": "2026-08-04T22:25:07.893663893Z 2026-08-04 22:25:07,893 INFO [orders-api] heap grew to approximately 64 MiB",
+        "text": "2026-08-15T22:55:28.092091340Z 2026-08-15 22:55:28,091 INFO [orders-api] heap grew to approximately 64 MiB",
         "previous": true
       }
     ],
     "per_container": {
-      "orders-api-6648dfcdb4-dwhzg/orders-api": {
+      "orders-api-6648dfcdb4-9w44v/orders-api": {
         "current": "ok",
         "previous": "ok",
         "generation": "current"
       },
-      "orders-api-6648dfcdb4-flqhm/orders-api": {
+      "orders-api-6648dfcdb4-b4jdb/orders-api": {
         "current": "ok",
         "previous": "ok",
         "generation": "current"
@@ -587,188 +559,197 @@
     {
       "type": "Normal",
       "reason": "Scheduled",
-      "message": "Successfully assigned shop/orders-api-6648dfcdb4-flqhm to sre-lab-worker",
-      "involved_object": "Pod/orders-api-6648dfcdb4-flqhm",
+      "message": "Successfully assigned shop/orders-api-6648dfcdb4-b4jdb to sre-lab-worker",
+      "involved_object": "Pod/orders-api-6648dfcdb4-b4jdb",
       "count": 1,
-      "first_seen": "2026-08-04T22:24:37+00:00",
-      "last_seen": "2026-08-04T22:24:37+00:00"
+      "first_seen": "2026-08-15T22:52:05+00:00",
+      "last_seen": "2026-08-15T22:52:05+00:00"
     },
     {
       "type": "Normal",
       "reason": "SuccessfulCreate",
-      "message": "Created pod: orders-api-6648dfcdb4-flqhm",
+      "message": "Created pod: orders-api-6648dfcdb4-b4jdb",
       "involved_object": "ReplicaSet/orders-api-6648dfcdb4",
       "count": 1,
-      "first_seen": "2026-08-04T22:24:37+00:00",
-      "last_seen": "2026-08-04T22:24:37+00:00"
+      "first_seen": "2026-08-15T22:52:05+00:00",
+      "last_seen": "2026-08-15T22:52:05+00:00"
     },
     {
       "type": "Normal",
       "reason": "ScalingReplicaSet",
       "message": "Scaled up replica set orders-api-6648dfcdb4 from 0 to 1",
       "involved_object": "Deployment/orders-api",
-      "count": 3,
-      "first_seen": "2026-08-03T21:26:17+00:00",
-      "last_seen": "2026-08-04T22:24:37+00:00"
+      "count": 1,
+      "first_seen": "2026-08-15T22:52:05+00:00",
+      "last_seen": "2026-08-15T22:52:05+00:00"
     },
     {
       "type": "Normal",
       "reason": "Scheduled",
-      "message": "Successfully assigned shop/orders-api-6648dfcdb4-dwhzg to sre-lab-worker",
-      "involved_object": "Pod/orders-api-6648dfcdb4-dwhzg",
+      "message": "Successfully assigned shop/orders-api-6648dfcdb4-9w44v to sre-lab-worker",
+      "involved_object": "Pod/orders-api-6648dfcdb4-9w44v",
       "count": 1,
-      "first_seen": "2026-08-04T22:24:43+00:00",
-      "last_seen": "2026-08-04T22:24:43+00:00"
+      "first_seen": "2026-08-15T22:52:11+00:00",
+      "last_seen": "2026-08-15T22:52:11+00:00"
     },
     {
       "type": "Normal",
       "reason": "SuccessfulCreate",
-      "message": "Created pod: orders-api-6648dfcdb4-dwhzg",
+      "message": "Created pod: orders-api-6648dfcdb4-9w44v",
       "involved_object": "ReplicaSet/orders-api-6648dfcdb4",
       "count": 1,
-      "first_seen": "2026-08-04T22:24:43+00:00",
-      "last_seen": "2026-08-04T22:24:43+00:00"
+      "first_seen": "2026-08-15T22:52:11+00:00",
+      "last_seen": "2026-08-15T22:52:11+00:00"
     },
     {
       "type": "Normal",
       "reason": "Killing",
       "message": "Stopping container orders-api",
-      "involved_object": "Pod/orders-api-688649cf7b-zpbtn",
+      "involved_object": "Pod/orders-api-688649cf7b-4v8lr",
       "count": 1,
-      "first_seen": "2026-08-04T22:24:43+00:00",
-      "last_seen": "2026-08-04T22:24:43+00:00"
+      "first_seen": "2026-08-15T22:52:11+00:00",
+      "last_seen": "2026-08-15T22:52:11+00:00"
     },
     {
       "type": "Normal",
       "reason": "SuccessfulDelete",
-      "message": "Deleted pod: orders-api-688649cf7b-zpbtn",
+      "message": "Deleted pod: orders-api-688649cf7b-4v8lr",
       "involved_object": "ReplicaSet/orders-api-688649cf7b",
       "count": 1,
-      "first_seen": "2026-08-04T22:24:43+00:00",
-      "last_seen": "2026-08-04T22:24:43+00:00"
+      "first_seen": "2026-08-15T22:52:11+00:00",
+      "last_seen": "2026-08-15T22:52:11+00:00"
     },
     {
       "type": "Normal",
       "reason": "ScalingReplicaSet",
       "message": "Scaled down replica set orders-api-688649cf7b from 2 to 1",
       "involved_object": "Deployment/orders-api",
-      "count": 7,
-      "first_seen": "2026-08-03T21:26:22+00:00",
-      "last_seen": "2026-08-04T22:24:43+00:00"
+      "count": 1,
+      "first_seen": "2026-08-15T22:52:11+00:00",
+      "last_seen": "2026-08-15T22:52:11+00:00"
     },
     {
       "type": "Normal",
       "reason": "ScalingReplicaSet",
       "message": "Scaled up replica set orders-api-6648dfcdb4 from 1 to 2",
       "involved_object": "Deployment/orders-api",
-      "count": 3,
-      "first_seen": "2026-08-03T21:26:22+00:00",
-      "last_seen": "2026-08-04T22:24:43+00:00"
-    },
-    {
-      "type": "Normal",
-      "reason": "Killing",
-      "message": "Stopping container orders-api",
-      "involved_object": "Pod/orders-api-688649cf7b-zsts6",
       "count": 1,
-      "first_seen": "2026-08-04T22:24:50+00:00",
-      "last_seen": "2026-08-04T22:24:50+00:00"
-    },
-    {
-      "type": "Normal",
-      "reason": "SuccessfulDelete",
-      "message": "Deleted pod: orders-api-688649cf7b-zsts6",
-      "involved_object": "ReplicaSet/orders-api-688649cf7b",
-      "count": 1,
-      "first_seen": "2026-08-04T22:24:50+00:00",
-      "last_seen": "2026-08-04T22:24:50+00:00"
+      "first_seen": "2026-08-15T22:52:11+00:00",
+      "last_seen": "2026-08-15T22:52:11+00:00"
     },
     {
       "type": "Normal",
       "reason": "ScalingReplicaSet",
       "message": "Scaled down replica set orders-api-688649cf7b from 1 to 0",
       "involved_object": "Deployment/orders-api",
+      "count": 1,
+      "first_seen": "2026-08-15T22:52:19+00:00",
+      "last_seen": "2026-08-15T22:52:19+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Killing",
+      "message": "Stopping container orders-api",
+      "involved_object": "Pod/orders-api-688649cf7b-2dmkw",
+      "count": 1,
+      "first_seen": "2026-08-15T22:52:20+00:00",
+      "last_seen": "2026-08-15T22:52:20+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "SuccessfulDelete",
+      "message": "Deleted pod: orders-api-688649cf7b-2dmkw",
+      "involved_object": "ReplicaSet/orders-api-688649cf7b",
+      "count": 1,
+      "first_seen": "2026-08-15T22:52:20+00:00",
+      "last_seen": "2026-08-15T22:52:20+00:00"
+    },
+    {
+      "type": "Warning",
+      "reason": "BackOff",
+      "message": "Back-off restarting failed container orders-api in pod orders-api-6648dfcdb4-9w44v_shop(0b3f8b2a-fd8f-49aa-8a69-2f4d83fb915f)",
+      "involved_object": "Pod/orders-api-6648dfcdb4-9w44v",
+      "count": 12,
+      "first_seen": "2026-08-15T22:52:26+00:00",
+      "last_seen": "2026-08-15T22:54:12+00:00"
+    },
+    {
+      "type": "Warning",
+      "reason": "BackOff",
+      "message": "Back-off restarting failed container orders-api in pod orders-api-6648dfcdb4-b4jdb_shop(d99f386d-3243-4291-b96e-c688d1b7bbfa)",
+      "involved_object": "Pod/orders-api-6648dfcdb4-b4jdb",
+      "count": 14,
+      "first_seen": "2026-08-15T22:52:20+00:00",
+      "last_seen": "2026-08-15T22:55:32+00:00"
+    },
+    {
+      "type": "Warning",
+      "reason": "Unhealthy",
+      "message": "Readiness probe failed: Get \"http://10.244.1.4:8080/readyz\": dial tcp 10.244.1.4:8080: connect: connection refused",
+      "involved_object": "Pod/orders-api-6648dfcdb4-b4jdb",
+      "count": 1,
+      "first_seen": "2026-08-15T22:55:32+00:00",
+      "last_seen": "2026-08-15T22:55:32+00:00"
+    },
+    {
+      "type": "Normal",
+      "reason": "Pulled",
+      "message": "Container image \"orders-api:v1.0.0\" already present on machine and can be accessed by the pod",
+      "involved_object": "Pod/orders-api-6648dfcdb4-b4jdb",
       "count": 7,
-      "first_seen": "2026-08-03T21:30:08+00:00",
-      "last_seen": "2026-08-04T22:24:50+00:00"
-    },
-    {
-      "type": "Normal",
-      "reason": "Pulled",
-      "message": "Container image \"orders-api:v1.0.0\" already present on machine and can be accessed by the pod",
-      "involved_object": "Pod/orders-api-6648dfcdb4-flqhm",
-      "count": 3,
-      "first_seen": "2026-08-04T22:24:37+00:00",
-      "last_seen": "2026-08-04T22:25:02+00:00"
+      "first_seen": "2026-08-15T22:52:06+00:00",
+      "last_seen": "2026-08-15T23:01:22+00:00"
     },
     {
       "type": "Normal",
       "reason": "Created",
       "message": "Container created",
-      "involved_object": "Pod/orders-api-6648dfcdb4-flqhm",
-      "count": 3,
-      "first_seen": "2026-08-04T22:24:37+00:00",
-      "last_seen": "2026-08-04T22:25:02+00:00"
-    },
-    {
-      "type": "Normal",
-      "reason": "Started",
-      "message": "Container started",
-      "involved_object": "Pod/orders-api-6648dfcdb4-flqhm",
-      "count": 3,
-      "first_seen": "2026-08-04T22:24:37+00:00",
-      "last_seen": "2026-08-04T22:25:02+00:00"
+      "involved_object": "Pod/orders-api-6648dfcdb4-b4jdb",
+      "count": 7,
+      "first_seen": "2026-08-15T22:52:06+00:00",
+      "last_seen": "2026-08-15T23:01:22+00:00"
     },
     {
       "type": "Normal",
       "reason": "Pulled",
       "message": "Container image \"orders-api:v1.0.0\" already present on machine and can be accessed by the pod",
-      "involved_object": "Pod/orders-api-6648dfcdb4-dwhzg",
-      "count": 3,
-      "first_seen": "2026-08-04T22:24:43+00:00",
-      "last_seen": "2026-08-04T22:25:08+00:00"
+      "involved_object": "Pod/orders-api-6648dfcdb4-9w44v",
+      "count": 6,
+      "first_seen": "2026-08-15T22:52:12+00:00",
+      "last_seen": "2026-08-15T23:01:23+00:00"
     },
     {
       "type": "Normal",
       "reason": "Created",
       "message": "Container created",
-      "involved_object": "Pod/orders-api-6648dfcdb4-dwhzg",
-      "count": 3,
-      "first_seen": "2026-08-04T22:24:43+00:00",
-      "last_seen": "2026-08-04T22:25:08+00:00"
+      "involved_object": "Pod/orders-api-6648dfcdb4-9w44v",
+      "count": 6,
+      "first_seen": "2026-08-15T22:52:12+00:00",
+      "last_seen": "2026-08-15T23:01:23+00:00"
     },
     {
       "type": "Normal",
       "reason": "Started",
       "message": "Container started",
-      "involved_object": "Pod/orders-api-6648dfcdb4-dwhzg",
-      "count": 3,
-      "first_seen": "2026-08-04T22:24:44+00:00",
-      "last_seen": "2026-08-04T22:25:08+00:00"
+      "involved_object": "Pod/orders-api-6648dfcdb4-b4jdb",
+      "count": 7,
+      "first_seen": "2026-08-15T22:52:06+00:00",
+      "last_seen": "2026-08-15T23:01:23+00:00"
     },
     {
-      "type": "Warning",
-      "reason": "BackOff",
-      "message": "Back-off restarting failed container orders-api in pod orders-api-6648dfcdb4-flqhm_shop(521922b2-4368-4c5d-a04e-e2849a8135e9)",
-      "involved_object": "Pod/orders-api-6648dfcdb4-flqhm",
+      "type": "Normal",
+      "reason": "Started",
+      "message": "Container started",
+      "involved_object": "Pod/orders-api-6648dfcdb4-9w44v",
       "count": 6,
-      "first_seen": "2026-08-04T22:24:51+00:00",
-      "last_seen": "2026-08-04T22:25:17+00:00"
-    },
-    {
-      "type": "Warning",
-      "reason": "BackOff",
-      "message": "Back-off restarting failed container orders-api in pod orders-api-6648dfcdb4-dwhzg_shop(9a034ca7-1505-4c29-a9c4-e5dedc33b210)",
-      "involved_object": "Pod/orders-api-6648dfcdb4-dwhzg",
-      "count": 6,
-      "first_seen": "2026-08-04T22:24:57+00:00",
-      "last_seen": "2026-08-04T22:25:23+00:00"
+      "first_seen": "2026-08-15T22:52:12+00:00",
+      "last_seen": "2026-08-15T23:01:24+00:00"
     }
   ],
   "rollouts": [
     {
-      "revision": 29,
-      "created_at": "2026-08-03T21:26:17+00:00",
+      "revision": 2,
+      "created_at": "2026-08-15T22:52:05+00:00",
       "image": "orders-api:v1.0.0",
       "change_cause": null,
       "is_current": true
@@ -776,9 +757,9 @@
   ],
   "workload_spec": {
     "annotations": {
-      "deployment.kubernetes.io/revision": "29",
-      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{\"sre-lab/scenario\":\"01-oomkilled\"},\"labels\":{\"app\":\"orders-api\"},\"name\":\"orders-api\",\"namespace\":\"shop\"},\"spec\":{\"replicas\":2,\"selector\":{\"matchLabels\":{\"app\":\"orders-api\"}},\"template\":{\"metadata\":{\"labels\":{\"app\":\"orders-api\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"DATABASE_URL\",\"value\":\"postgres://app:secret@postgres.shop.svc:5432/orders\"},{\"name\":\"FEATURE_FLAGS\",\"value\":\"{\\\"enrich_region\\\": false}\"},{\"name\":\"MEMORY_BALLAST_MB\",\"value\":\"512\"}],\"image\":\"orders-api:v1.0.0\",\"imagePullPolicy\":\"IfNotPresent\",\"livenessProbe\":{\"httpGet\":{\"path\":\"/healthz\",\"port\":8080},\"initialDelaySeconds\":5,\"periodSeconds\":10},\"name\":\"orders-api\",\"ports\":[{\"containerPort\":8080}],\"readinessProbe\":{\"httpGet\":{\"path\":\"/readyz\",\"port\":8080},\"initialDelaySeconds\":3,\"periodSeconds\":5},\"resources\":{\"limits\":{\"cpu\":\"500m\",\"memory\":\"96Mi\"},\"requests\":{\"cpu\":\"50m\",\"memory\":\"64Mi\"}}}]}}}}\n",
-      "sre-lab/scenario": "01-oomkilled"
+      "deployment.kubernetes.io/revision": "2",
+      "sre.agent/repo": "https://github.com/yerratejaswi/ai-sre-agent",
+      "sre.agent/source-root": "lab/app"
     },
     "replicas": 2,
     "containers": [
@@ -820,11 +801,11 @@
       }
     ]
   },
-  "endpoint_count": 0,
+  "endpoint_count": 2,
   "expected_replicas": 2,
-  "ready_replicas": 0,
+  "ready_replicas": 2,
   "current_gen_pods": 2,
-  "current_gen_ready": 0,
+  "current_gen_ready": 2,
   "previous_gen_ready": 0,
   "collection_errors": []
 }
